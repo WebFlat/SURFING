@@ -907,6 +907,153 @@ body {
 }
 
 
+
+
+//Contacts block***********************************************************
+.contacts-block {
+	background-color: #fff;
+	color: $dark-color;
+	padding: 40px;
+	display: flex;
+	width: 100%;
+	display: none;
+}
+.info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 65%;
+	&__header {
+		font-size: 1.9rem;
+		font-weight: 500;
+		justify-content: flex-start;
+	}
+	&__title {
+		font-size: 1.5rem;
+		font-weight: 400;
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+	}
+	&__data,
+	&__address,
+	&__cont,
+	&__numbers {
+		display: flex;
+		align-items: center;
+	}
+	&__data {
+		justify-content: space-around;
+		margin-top: 20px;
+	}
+	&__numbers {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	&__wrap-img {
+		width: 50px;
+		height: 40px;
+		object-fit: cover;
+		position: relative;
+		overflow: hidden;
+		margin-right: 10px;
+	}
+	&__img {
+		@include myPos();
+	}
+	&__text,
+	&__addr,
+	&__tel,
+	&__fax,
+	&__email {
+		font-size: 1.2rem;
+		color: $primary-color;
+		font-family: 'Roboto', sans-serif;
+	}
+	&__fax {
+		text-transform: uppercase;
+	}
+	&__addr {
+		color: $dark-color;
+		font-style: normal;
+	}
+	&__link {
+		padding-left: 20px;
+		@include tr(.2s);
+		&--fax {
+			padding-left: 55px;
+		}
+		&--email {
+			padding-left: 30px;
+		}
+		&:hover,
+		&:active,
+		&:focus {
+			color: $hover-green;
+		}
+	}
+
+}
+.contact-form {
+	width: 35%;
+	padding-left: 15px;
+}
+.form {
+	&__body {
+		margin-top: 30px;
+	}
+	&__name,
+	&__mail,
+	&__phone,
+	&__message {
+		line-height: 1;
+		margin-top: 10px;
+		font-size: 1.3rem;
+		width: 100%;
+		padding: 7px 5px;
+		border: 2px solid rgba(0, 0, 0, 0.2);
+		border-radius: 5px;
+		@include tr(.2s);
+		overflow: hidden;
+		outline: none;
+		&:focus,
+		&:hover,
+		&:active {
+			border: 2px solid rgba(0, 0, 0, 0.5);
+		}
+		&::placeholder {
+			color: rgba(0, 0, 0, 0.3);
+		}
+	}
+	&__reset,
+	&__send {
+		font-size: 1.1rem;
+		color: $current-color;
+		text-transform: uppercase;
+		background: linear-gradient(to bottom, #171718, #39393a);
+		padding: 9px;
+		width: 70px;
+		outline: none;
+		border: none;
+		border-radius: 5px;
+		margin: 10px 20px 0 0;
+		color: $primary-color;
+		cursor: pointer;
+		font-family: 'Roboto', sans-serif;
+		@include tr(.3s);
+		letter-spacing: 1px;
+		&:hover,
+		&:active,
+		&:focus {
+		background: linear-gradient(to top, #171718, #39393a);
+		color: $current-color;
+		}
+	}
+	
+}
+
+
 //Nav footer***************************************************************
 .nav-footer {
 	background: rgb(0,0,0);
