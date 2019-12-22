@@ -1,7 +1,10 @@
 $(document).ready(function(){
 	'use strict';
 
-
+	$('.burger').click(function() {
+		$('.nav--burger').toggleClass('show');
+		$('.burger__line').toggleClass('rotate');
+	});
 
 	$('.owl-carousel').owlCarousel({
 		loop:true,
